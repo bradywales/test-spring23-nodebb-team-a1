@@ -1,4 +1,4 @@
-name: Run npx standard
+name: Run flow
 
 on:
   push:
@@ -19,4 +19,4 @@ jobs:
         run: npm install
 
       - name: Run flow
-        run: npm run flow
+        run: npm run flow check -all
