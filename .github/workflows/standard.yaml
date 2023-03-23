@@ -15,9 +15,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v35.7.6
-          
-      - name: Run npx standard
-        run: npx standard ${ steps.changed-files.outputs.all_changed_files }
+      - name: Run flow
+        run: npm run flow
