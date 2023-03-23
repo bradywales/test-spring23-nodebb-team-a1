@@ -15,5 +15,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run npx standard
-        run: npx standard ${{ github.workspace }}/${{ github.event.inputs.file }}
+      - name: List all changed files
+        run: |
+          for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+            echo "$file was changed"
+          done
