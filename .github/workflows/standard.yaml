@@ -2,8 +2,11 @@ name: Run npx standard
 
 on:
   push:
-    paths:
-      - '**.js'
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   npx-standard:
